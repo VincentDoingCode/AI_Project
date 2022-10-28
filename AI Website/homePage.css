@@ -1,0 +1,47 @@
+html, body{
+    margin: 0;
+    width: 100%;
+}
+
+.lists{
+    width: 100%;
+}
+
+.nav div{
+    height: 4px;
+    background-color: black;
+    /*margin of 5px on top and bottom but 0 px on left and right*/
+    margin: 5px 0;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.nav{
+    width: 30px;
+    display: block;
+    /*top 1em, right 0, bottom 0, left 1em*/
+    margin: 1em 0 0 1em;
+}
+
+.one{
+    width: 30px;
+}
+.two{
+    width: 20px;
+}
+.three{
+    width: 25px;
+}
+
+/*when you hover over the menu, it turns into 3 equal width lines*/
+.nav:hover div{
+    width: 30px;
+}
+
+.nav:hover .navbar{
+    display: block;
+}
+
+.navbar li{
+    display: block;
+}
