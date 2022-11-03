@@ -2,7 +2,9 @@ html, body{
     margin: 0;
     width: 100%;
 }
-
+body{
+    background-image: url(images/backgroundImg.gif);
+}
 @media screen and (max-width: 780px) {
     .lists{
         width: 100%;
@@ -78,5 +80,9 @@ html, body{
     .navbar ul li a:hover{
         color: rgb(45, 215, 237);
         text-decoration: underline;
+    }
+
+    .logo{
+        width: auto;
     }
 }
