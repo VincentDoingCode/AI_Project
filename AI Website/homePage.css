@@ -2,11 +2,19 @@ html, body{
     margin: 0;
     width: 100%;
 }
-body{
-    background-image: url(images/aibackground.gif);
+
+html { 
+    background: url(images/aibackground.gif) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-}
+  }
+
 @media screen and (max-width: 780px) {
+    body{
+        background-size: auto;
+    }
     .lists{
         width: 100%;
     }
@@ -98,4 +106,9 @@ body{
 footer{
     height: auto;
     color: white;
+    position: absolute;
+    bottom: 0;
+}
+button{
+    list-style: none;
 }
