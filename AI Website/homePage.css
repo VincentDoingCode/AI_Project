@@ -35,31 +35,34 @@ html {
         margin: 1em 0 0 1em;
         
     }
-    
-    .one{
+    .navbar .menu{
+        position: absolute;
+        right: 350px;
+        top: -100px;
+        z-index: 100;
+        width: 200px;
+        height: 200px;
+        background: #FFF;
+        border-radius: 50% 50% 50% 50%;
+        -webkit-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+        cursor: pointer;
+    }
+
+    .navbar .hamburger{
+        position: absolute;
+        top: 145px;
+        right: 75px;
         width: 30px;
-    }
-    .two{
-        width: 20px;
-    }
-    .three{
-        width: 25px;
-    }
-    
-    /*when you hover over the menu, it turns into 3 equal width lines*/
-    .nav:hover div{
-        width: 30px;
-        
-    }
-    
-    .nav:hover .navbar{
-        transition: translateX(-30px);
-    }
-    
-    .navbar li{
+        height: 2px;
+        background: #69D2e7;
         display: block;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
     }
-    
 }
 
 @media screen and (min-width: 780px){
@@ -109,6 +112,13 @@ footer{
     position: absolute;
     bottom: 0;
 }
-button{
-    list-style: none;
+
+button a{
+    size: 150%;
+    color: black;
+    text-decoration: none;
+}
+button:hover a{
+    color: rgb(45, 215, 237);
+    text-decoration: underline;
 }
