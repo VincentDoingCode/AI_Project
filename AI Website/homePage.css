@@ -12,123 +12,57 @@ html {
   }
 
 @media screen and (max-width: 780px) {
-    html{
-        font-size: 18px;
-    }
     body{
         background-size: auto;
-        font-size: 1.2em;
     }
     .lists{
         width: 100%;
     }
-
-    .navbar .menu{
-        position: absolute;
-        right: -100px;
-        top: -100px;
-        /*z-index set the stacking order. Since all other div has a default of 0, z-index of 100 would set the menu above all else*/
-        z-index: 100;
-        width: 200px;
-        height: 200px;
-        background: #FFF;
-        border-radius: 50% 50% 50% 50%;
-        -webkit-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
-        /*box shadow is used to remove the box shadow*/
-        box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
-        cursor: pointer;
+    
+    .nav div{
+        height: 4px;
+        background-color: black;
+        /*margin of 5px on top and bottom but 0 px on left and right*/
+        margin: 5px 0;
+        border-radius: 25px;
+        transition: 0.3s;
     }
-
-    .navbar .hamburger{
-        position: absolute;
-        top: 145px;
-        right: 115px;
+    
+    .nav{
         width: 30px;
-        height: 2px;
-        background: #69D2e7;
         display: block;
-        -webkit-transform-origin: center;
-        transform-origin: center;
-        -webkit-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
-    }
-
-    .navbar .hamburger:after, .navbar .hamburger:before {
-        -webkit-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
-        content: "";
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 100%;
-        background: #69d2e7;
-    }
-
-    .navbar .hamburger:before { top: -10px; }
-
-    .navbar .hamburger:after { bottom: -10px; }
-
-    .navbar input {display: none;}
-    
-    .navbar input:checked + .menu {
-        box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
-        border-radius: 0;
-    }
-
-    .navbar input:checked + .menu .hamburger {
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-
-    .navbar input:checked + .menu .hamburger:before {
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
-        top: 0;
-    }
-
-    .navbar input:checked + .menu .hamburger:after {
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
-        bottom: 0;
-    }
-    .navbar input:checked + .menu + ul{opacity: 1;}
-
-    .navbar ul {
-        z-index: 200;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        opacity: 0;
-        -webkit-transition: .25s 0s ease-in-out;
-        transition: .25s 0s ease-in-out;
-        list-style: none;
+        /*top 1em, right 0, bottom 0, left 1em*/
+        margin: 1em 0 0 1em;
+        
     }
     
-    label a {
-        margin-bottom: 1em;
+    .one{
+        width: 30px;
+    }
+    .two{
+        width: 20px;
+    }
+    .three{
+        width: 25px;
+    }
+    
+    /*when you hover over the menu, it turns into 3 equal width lines*/
+    .nav:hover div{
+        width: 30px;
+        
+    }
+    
+    .nav:hover .navbar{
+        transition: translateX(-30px);
+    }
+    
+    .navbar li{
         display: block;
-        color: orange ;
-        text-decoration: none;
     }
-    .navbar ul li a:hover{
-        text-decoration: underline;
-        color: #69d2e7;
-    }
-
-    button{
-        position: absolute;
-        bottom: 60%;
-        right: 45%;
-    }
+    
 }
 
 @media screen and (min-width: 780px){
-    input{
-        visibility: hidden;
-    }
     .navbar{
         margin: auto;
         padding: 20px;
@@ -175,23 +109,6 @@ footer{
     position: absolute;
     bottom: 0;
 }
-
 button{
-    border: #69D2e7;
-    border-radius: 10px;
-    background-color: rgb(193, 158, 225);
-    padding: 12px;
-    padding-right: 1em;
-    padding-left: 1em;
-    font-size: large;
-    width: auto;
-}
-
-button a{
-    color: white;
-    text-decoration: none;
-}
-button:hover a{
-    color: rgb(45, 215, 237);
-    text-decoration: underline;
+    list-style: none;
 }
