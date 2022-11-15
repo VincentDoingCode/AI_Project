@@ -149,3 +149,13 @@
 h1{
     font-size: 50px;
 }
+.list{ 
+
+    display: inline-flex;
+    background-color: #69d2e7;
+    width: auto;
+}
+html{
+    /*You can not scroll left and right on the website.*/
+    overflow-x: hidden;
+}
