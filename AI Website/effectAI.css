@@ -159,3 +159,9 @@ html{
     /*You can not scroll left and right on the website.*/
     overflow-x: hidden;
 }
+footer{
+    height: auto;
+    color: white;
+    position: fixed;
+    bottom: 0;
+}
