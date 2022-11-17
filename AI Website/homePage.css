@@ -3,14 +3,125 @@ html, body{
     width: 100%;
 }
 
-html { 
+.html { 
     background: url(images/aibackground.gif) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow-y: hidden;
   }
 
+   .footer{
+    height: auto;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    padding-top: 40px;
+    background:  rgb(0, 0, 0,.1);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+}
+
+button{
+    border: #69D2e7;
+    border-radius: 10px;
+    background-color: rgb(193, 158, 225);
+    padding: 12px;
+    padding-right: 1em;
+    padding-left: 1em;
+    font-size: large;
+    width: auto;
+}
+
+button a{
+    color: white;
+    text-decoration: none;
+}
+button:hover a{
+    color: rgb(45, 215, 237);
+    text-decoration: underline;
+}
+
+.footer-menu{
+    float: right;
+}
+.footer-menu ul{
+    display: flex;
+}
+.footer-menu ul li{
+    padding-right: 10px;
+    display: block;
+    }
+    
+.footer-menu ul li a{
+    color: #cfd2d6;
+    text-decoration: none;
+}
+
+
+.info{
+    font-size: 25px;
+    min-height: 100%;
+    margin-bottom: -80px;
+}
+
+.info:after{
+    content: "";
+    display: block;
+}
+
+h1{
+    font-size: 50px;
+}
+.list{ 
+
+    display: inline-flex;
+    background-color: #69d2e7;
+    width: auto;
+}
+html{
+    /*You can not scroll left and right on the website.*/
+    overflow-x: hidden;
+}
+.footerEffect{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background:  rgb(0, 0, 0,.1);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+}
+.footerEffect, .info:after{
+    height: 100px;
+}
+.footerEffect,.footer-menu{
+    color: white;
+    bottom: 0;
+    background-color: black;
+    position: relative;
+}
+.footerEffect:before,.footer-menu:before{
+    content: "";
+    position:absolute;
+    background-color: black;
+    width: 40000px;
+    height: 180%;
+    left: -1000px;
+    z-index: -1;
+}
 @media screen and (max-width: 780px) {
     html{
         font-size: 18px;
@@ -174,58 +285,3 @@ html {
     }
 }
 
-footer{
-    height: auto;
-    color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    padding-top: 40px;
-    background:  rgb(0, 0, 0,.1);
-}
-
-button{
-    border: #69D2e7;
-    border-radius: 10px;
-    background-color: rgb(193, 158, 225);
-    padding: 12px;
-    padding-right: 1em;
-    padding-left: 1em;
-    font-size: large;
-    width: auto;
-}
-
-button a{
-    color: white;
-    text-decoration: none;
-}
-button:hover a{
-    color: rgb(45, 215, 237);
-    text-decoration: underline;
-}
-
-.footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    text-align: center;
-}
-
-.footer-menu{
-    float: right;
-}
-.footer-menu ul{
-    display: flex;
-}
-.footer-menu ul li{
-    padding-right: 10px;
-    display: block;
-    }
-    
-.footer-menu ul li a{
-    color: #cfd2d6;
-    text-decoration: none;
-}

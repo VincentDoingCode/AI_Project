@@ -145,7 +145,15 @@
 
 .info{
     font-size: 25px;
+    min-height: 100%;
+    margin-bottom: -100px;
 }
+
+.info:after{
+    content: "";
+    display: block;
+}
+
 h1{
     font-size: 50px;
 }
@@ -159,9 +167,11 @@ html{
     /*You can not scroll left and right on the website.*/
     overflow-x: hidden;
 }
-footer{
-    height: auto;
+.footer, .info:after{
+    height: 100px;
+}
+.footer{
     color: white;
-    position: fixed;
     bottom: 0;
+    background-color: #69d2e7;
 }
